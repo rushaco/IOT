@@ -1,16 +1,21 @@
-void setup () {
-// put your setup code here, to run once:
-pinMode (13, OUTPUT) ;
-pinMode (2, OUTPUT) ;
+// Define LED pin
+#define LED_PIN 2
 
-void loop () {
-// put your main code here, to run repeatedly:
-digitalWrite(13, HIGH) ;
-delay (1000) ;
+// Setup function
+void setup() {
+  // Set LED pin as output
+  pinMode(LED_PIN, OUTPUT);
+}
 
-digitalWrite(2, HIGH);
-delay (500);
-digitalWrite (13, LOW) ;
-delay(1000);
-digitalWrite(2, LOW) ;
-delay(1000);
+// Loop function
+void loop() {
+  // Turn on LED
+  digitalWrite(LED_PIN, HIGH);
+  // Delay for 1 second
+  delay(1000);
+  
+  // Turn off LED
+  digitalWrite(LED_PIN, LOW);
+  // Delay for 1 second
+  delay(1000);
+}
